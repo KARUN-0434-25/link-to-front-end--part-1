@@ -1,0 +1,45 @@
+body{
+    background: linear-gradient(90deg,#0C1519,#162127,#3A3534,#724B39,#CF9D78);
+}
+#container{
+  border: solid 1vh #404243;
+  display: flex;
+  gap: 2vh;
+  height: 90vh;
+  margin: 3vh;
+}
+#inside-container01{
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0,0.37);
+    /* padding: 20px; */
+    width: 150vh;
+}
+#inside-container02 {
+  margin: 4vh;
+  height: 60vh;
+  width: 130vh;
+  margin-bottom: 2vh;
+  
+
+}
+.folder-icon{
+    background: #717476;
+    width: 22vh;
+    height: 20vh;
+    border-radius: 2vh;
+    /* for the glassmorphism */
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0,0.37);
+    padding: 20px;
+}
+img{
+    width: 14vh;
+    height: auto;
+    margin: 4vh;
+}
