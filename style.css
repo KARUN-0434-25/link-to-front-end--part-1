@@ -1,3 +1,4 @@
+/* *{box-sizing: border-box;} */
 body{
     background: linear-gradient(90deg,#0C1519,#162127,#3A3534,#724B39,#CF9D78);
 }
@@ -22,13 +23,14 @@ body{
   height: 60vh;
   width: 130vh;
   margin-bottom: 2vh;
-  
+  display: flex;
+  gap: 5vh;
 
 }
 .folder-icon{
     background: #717476;
-    width: 22vh;
-    height: 20vh;
+    width: 42vh;
+    height: 30vh;
     border-radius: 2vh;
     /* for the glassmorphism */
     background: rgba(255,255,255,0.05);
@@ -39,7 +41,7 @@ body{
     padding: 20px;
 }
 img{
-    width: 14vh;
+    width: 24vh;
     height: auto;
-    margin: 4vh;
+    margin: 8vh;
 }
