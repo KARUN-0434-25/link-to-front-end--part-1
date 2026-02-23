@@ -1,6 +1,7 @@
 /* *{box-sizing: border-box;} */
 body{
     background: linear-gradient(90deg,#0C1519,#162127,#3A3534,#724B39,#CF9D78);
+    color: whitesmoke;
 }
 #container{
   border: solid 1vh #404243;
