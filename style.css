@@ -12,7 +12,7 @@ body {
 
 /* Main Outer Layout (Laptop Screen Style) */
 #container {
-    border: solid 1vh #030303;
+    border: solid 2vh #030303;
     display: flex;
     flex-direction: column; /* Vertical stack like the reference image */
     gap: 2vh;
@@ -27,10 +27,9 @@ body {
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-    
-    flex: 2; /* Takes up 2/3 of the vertical space */
+    /* border: 1px solid rgba(255, 255, 255, 0.1); */
+    /* box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); */
+    /* flex: 2;  */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,13 +39,12 @@ body {
 
 /* BOTTOM BOX: Write-up Area (Dark Glass) */
 #inside-container02 {
-    background: rgba(0, 0, 0, 0.7); /* Darker background for the write-up */
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 -4px 32px 0 rgba(0, 0, 0, 0.5);
-    
-    flex: 1; /* Takes up 1/3 of the vertical space */
+    background: rgb(0, 0, 0); /* Darker background for the write-up */
+    /* backdrop-filter: blur(20px); */
+    /* -webkit-backdrop-filter: blur(20px); */
+    /* border: 1px solid rgba(255, 255, 255, 0.1); */
+    /* box-shadow: 0 -4px 32px 0 rgba(0, 0, 0, 0.5); */
+    flex: 1;
     padding: 4vh;
     overflow-y: auto;
 }
