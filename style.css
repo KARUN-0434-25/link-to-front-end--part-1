@@ -1,85 +1,118 @@
-body{
-    background: linear-gradient(90deg,#0C1519,#162127,#3A3534,#724B39,#CF9D78);
+/* General Setup */
+body {
+    background: linear-gradient(90deg, #0C1519, #162127, #3A3534, #724B39, #CF9D78);
     color: whitesmoke;
-}
-#container{
-  border: solid 1vh #030303;
-  border-width: 1vh;
-  display: flex;
-  gap: 2vh;
-  height: 90vh;
-  margin: 3vh;
-}
-#inside-container01{
-    background: rgba(54, 53, 53, 0);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255,255,255,0.1);
-    box-shadow: 0 8px 32px 0 rgba(0,0,0,0,0.37);
-    width: 150vh;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
-/* --- UPDATED RIGHT CONTAINER --- */
+/* Main Outer Layout (Laptop Screen Style) */
+#container {
+    border: solid 1vh #030303;
+    display: flex;
+    flex-direction: column; /* Vertical stack like the reference image */
+    gap: 2vh;
+    height: 92vh;
+    width: 95vw;
+    margin: 2vh;
+    box-sizing: border-box;
+}
+
+/* TOP BOX: Folders / Hero Area */
+#inside-container01 {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    
+    flex: 2; /* Takes up 2/3 of the vertical space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8vh;
+    padding: 2vh;
+}
+
+/* BOTTOM BOX: Write-up Area (Dark Glass) */
 #inside-container02 {
-  background: rgba(0, 0, 0, 0.6); 
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
-  width: 130vh;
-  display: flex;
-  gap: 5vh;
+    background: rgba(0, 0, 0, 0.7); /* Darker background for the write-up */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 -4px 32px 0 rgba(0, 0, 0, 0.5);
+    
+    flex: 1; /* Takes up 1/3 of the vertical space */
+    padding: 4vh;
+    overflow-y: auto;
 }
 
-.folder-icon{
-    background: #717476;
-    width: 42vh;
-    height: 30vh;
-    border-radius: 2vh;
-/* for the glassmorphism */
-    background: rgba(255,255,255,0.05);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255,255,255,0.1);
-    box-shadow: 0 8px 32px 0 rgba(0,0,0,0,0.37);
-    padding: 20px;
+/* Folder Icon Cards */
+.folder-icon {
+    width: 35vh;
+    height: 28vh;
+    border-radius: 2.5vh;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    text-align: center;
+    transition: transform 0.3s ease;
 }
-img{
-    width: 24vh;
+
+.folder-icon:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.12);
+}
+
+img {
+    width: 15vh;
     height: auto;
-    margin: 8vh;
+    margin-top: 4vh;
+    margin-bottom: 2vh;
+}
+
+h3 {
+    font-size: 1.8vh;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+/* Write-up Styling */
+.write-up-content h2 {
+    margin-top: 0;
+    color: #CF9D78; /* Matching one of your gradient colors */
 }
 
 /* --- RESPONSIVE ADDITIONS --- */
-
 @media (max-width: 1024px) {
-    #container {
-        flex-direction: column; 
-        height: auto;
-        min-height: 90vh;
+    #inside-container01 {
+        flex-direction: row;
+        gap: 3vh;
     }
-
-    #inside-container01, #inside-container02 {
-        width: 100%; 
-        margin: 0;
-        height: auto;
-        padding: 2vh;
+    
+    .folder-icon {
+        width: 30vw;
     }
+}
 
-    #inside-container02 {
-        flex-wrap: wrap; 
-        justify-content: center;
+@media (max-width: 768px) {
+    #inside-container01 {
+        flex-direction: column;
+        height: auto;
+        flex: 3;
     }
 
     .folder-icon {
-        width: 80%; 
+        width: 60%;
         height: auto;
-        margin-bottom: 2vh;
+        padding-bottom: 3vh;
     }
 
     img {
-        width: 50%;
-        margin: 2vh auto;
-        display: block;
+        width: 12vh;
     }
 }
